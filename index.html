@@ -3,9 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>fruit website</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- lato google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+      :where(.navbar > *) {
+      flex-direction: row-reverse;
+      align-items: center;
+      } 
+      .lato-font{
+        font-family: 'Lato', sans-serif;
+      }
+    </style>
 </head>
-<body>
+<body class="lato-font">
+    <header class="container mx-auto ">
+      <!-- header area is start -->
+        <nav>
+            <div class="navbar lg:bg-[#F85559] sm:bg-white sm:text-black  bg-base-100  rounded-full mt-12 mb-12 p-2 lg:flex-row flex-row-reverse justify-between">
+                <div class="navbar-start lg:flex-row">
+                  <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost btn-circle lg:hidden  lg:text-white text-black">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                    </label>
+                  
+                   <div class=" hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-white">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                      </ul>
+                   </div>
+                  </div>
+                </div>
+                <div class="navbar-center  pb-4  lg:text-white text-black">
+                  <a class="btn btn-ghost normal-case text-4xl flex justify-center items-center">
+                    <div class="">
+                        <img src="./images/logo.png" class="h-[60px]" alt="">
+                    </div>
+                    Fruit Burst</a>
+                </div>
+                <div class="navbar-end  hidden lg:flex justify-start">
+                    <div class="form-control w-80">
+                        <div class="relative">
+                          <input type="text" placeholder="Search" class="outline-none rounded-l-full pl-5  py-2 pr-20 text-black relative" /> 
+                          <button class="bg-white text-black absolute font-medium rounded-r-full py-2 pr-4">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                          </button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </nav>
+        <!-- banner section is start -->
+        <section>
+          <div class="">
+            <div class="carousel w-full">
+              <div id="slide1" class="carousel-item relative w-full">
+                <img src="/images/banner1.png" class="w-full" />
+                
+                  <div class="absolute top-0 left-0 w-full h-full bg-black text-white text-center flex flex-col justify-center items-center bg-opacity-50">
+                    <h1 class="lg:text-7xl text-3xl font-extrabold md:mb-5 mb-2">Exotic tastes at your <br> doorstep</h1>
+                    <p class="max-w-auto text-xs lg:text-sm md:text-sm">We supply highly quality organic products</p>
+                    <button class="lg:py-4 md:py-4 lg:px-7 md:px-7 px-4 py-2 rounded-xl bg-[#F85559] text-white font-extrabold text-sm md:mt-8 mt-3">Shop Now</button>
+                  </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 text-black">
+                  <a href="#slide4" class="btn btn-circle bg-black text-white border-black">❮</a> 
+                  <a href="#slide2" class="btn btn-circle bg-black text-white border-black ">❯</a>
+                </div>
+              </div> 
+              <div id="slide2" class="carousel-item relative w-full">
+                <img src="/images/banner2.png" class="w-full" />
+                
+                <div class="absolute top-0 left-0 w-full h-full bg-black text-white text-center flex flex-col justify-center items-center bg-opacity-50">
+                  <h1 class="lg:text-7xl text-3xl font-extrabold mb-5">Exotic tastes at your <br> doorstep</h1>
+                  <p class="max-w-auto text-xs lg:text-sm md:text-sm">We supply highly quality organic products</p>
+                  <button class="py-4 px-7  rounded-xl bg-[#F85559] text-white font-extrabold text-sm mt-8">Shop Now</button>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide1" class="btn btn-circle  bg-black text-white border-black">❮</a> 
+                  <a href="#slide3" class="btn btn-circle  bg-black text-white border-black">❯</a>
+                </div>
+              </div> 
+              <div id="slide3" class="carousel-item relative w-full">
+                <img src="/images/banner3.png" class="w-full" />
+                
+                <div class="absolute top-0 left-0 w-full h-full bg-black text-white text-center flex flex-col justify-center items-center bg-opacity-50">
+                  <h1 class="lg:text-7xl text-3xl font-extrabold mb-5">Exotic tastes at your <br> doorstep</h1>
+                  <p class="max-w-auto text-xs lg:text-sm md:text-sm">We supply highly quality organic products</p>
+                  <button class="py-4 px-7  rounded-xl bg-[#F85559] text-white font-extrabold text-sm mt-8">Shop Now</button>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide2" class="btn btn-circle  bg-black text-white border-black">❮</a> 
+                  <a href="#slide4" class="btn btn-circle  bg-black text-white border-black">❯</a>
+                </div>
+              </div> 
+              <div id="slide4" class="carousel-item relative w-full">
+                <img src="/images/banner4.png" class="w-full" />
+                
+                <div class="absolute top-0 left-0 w-full h-full bg-black text-white text-center flex flex-col justify-center items-center bg-opacity-50">
+                  <h1 class="lg:text-7xl text-3xl font-extrabold mb-5">Exotic tastes at your <br> doorstep</h1>
+                  <p class="max-w-auto text-xs lg:text-sm md:text-sm">We supply highly quality organic products</p>
+                  <button class="py-4 px-7  rounded-xl bg-[#F85559] text-white font-extrabold text-sm mt-8">Shop Now</button>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide3" class="btn btn-circle bg-black text-white border-black">❮</a> 
+                  <a href="#slide1" class="btn btn-circle bg-black text-white border-black">❯</a>
+                </div>
+              </div>
+            </div>
+            <!-- many fruits area -->
+            <div class="lg:grid hidden md:hidden lg:grid-cols-5 gap-14 bg-white  px-24 py-10  absolute -mt-20 mx-40 rounded-xl shadow-2xl">
+              <div class="">
+                <img src="./images/fruit1.png" alt="">
+                <p class="ml-7 mt-3">Strawberry</p>
+              </div>
+              <div class="">
+                <img src="./images/fruit2.png" alt="">
+                <p class="ml-7 mt-3">Orange</p>
+              </div>
+              <div class="">
+                <img src="./images/fruit3.png" alt="">
+                <p class="ml-7 mt-3">Mango</p>
+              </div>
+              <div class="">
+                <img src="./images/fruit4.png" alt="">
+                <p class="ml-7 mt-3">Strawberry</p>
+              </div>
+              <div class="">
+                <img src="./images/fruit5.png" alt="">
+                <p class="ml-7 mt-3">Strawberry</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+    </header>
+    <main  class="container mx-auto">
+      <!-- timer section is start -->
+      <section>
+        <div class="">
+          <div class="">
+            <h1 class="text-5xl font-extrabold">Deal of the day</h1>
+            <p class="mt-5 text-lg lg:w-[615px] mb-9">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- team section is start -->
+      <section class="mt-64 sm:mx-2 xs:mx-1">
+          <div class=" relative">
+            <img src="./images/team.png" class="lg:w-[100%] w-auto h-full absolute" alt="">
+            <div class="relative top-0 left-0 w-full h-full bg-black text-white text-center flex flex-col justify-center items-center bg-opacity-50 py-40">
+             
+                <h1 class="text-5xl font-extrabold">Meet the team section</h1>
+                <p class="mt-5 text-lg lg:w-[615px] mb-9">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
+                    <!-- team menber-1 -->
+                    <div >
+                        <img src="./images/member1.png" alt="">
+                        <h3 class="text-2xl mb-3 mt-8">Awlad Hossain</h3>
+                        <p class="text-lg mb-3">Fruits Expert</p>
+                        <a href="">
+                          <i class="fa-brands fa-facebook-f bg-[#F85559] p-2 rounded-full mr-2"></i>
+                          <i class="fa-brands fa-twitter bg-[#F85559] p-2 rounded-full mr-2"></i>
+                          <i class="fa-brands fa-linkedin-in bg-[#F85559] p-2 rounded-full"></i>
+                        </a>
+                    </div>
+                    <!-- team menber-2 -->
+                    <div>
+                      <img src="./images/member2.png" alt="">
+                      <h3 class="text-2xl mb-3 mt-8">Safia sultana</h3>
+                      <p class="text-lg mb-3">Fruits Expert</p>
+                      <a href="">
+                        <i class="fa-brands fa-facebook-f bg-[#F85559] p-2 rounded-full mr-2"></i>
+                        <i class="fa-brands fa-twitter bg-[#F85559] p-2 rounded-full mr-2"></i>
+                        <i class="fa-brands fa-linkedin-in bg-[#F85559] p-2 rounded-full"></i>
+                      </a>
+                  </div>
+                  <!-- team menber-3 -->
+                  <div>
+                    <img src="./images/member3.png" alt="">
+                    <h3 class="text-2xl mb-3 mt-8">Rokib Hossain</h3>
+                    <p class="text-lg mb-3">Fruits Expert</p>
+                    <a href="">
+                      <i class="fa-brands fa-facebook-f bg-[#F85559] p-2 rounded-full mr-2"></i>
+                      <i class="fa-brands fa-twitter bg-[#F85559] p-2 rounded-full mr-2"></i>
+                      <i class="fa-brands fa-linkedin-in bg-[#F85559] p-2 rounded-full"></i>
+                    </a>
+                </div>
+                <!-- team menber-4 -->
+                <div>
+                  <img src="./images/member4.png" alt="">
+                  <h3 class="text-2xl mb-3 mt-8">Chaity sultana</h3>
+                  <p class="text-lg mb-3">Fruits Expert</p>
+                  <a href="">
+                    <i class="fa-brands fa-facebook-f bg-[#F85559] p-2 rounded-full mr-2"></i>
+                    <i class="fa-brands fa-twitter bg-[#F85559] p-2 rounded-full mr-2"></i>
+                    <i class="fa-brands fa-linkedin-in bg-[#F85559] p-2 rounded-full"></i>
+                  </a>
+              </div>
+                </div>
+            </div>
+          </div>
+      </section>
+
+    </main>
+    <footer>
+
+    </footer>
     
 </body>
 </html>
